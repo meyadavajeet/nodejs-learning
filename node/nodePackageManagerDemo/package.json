@@ -1,0 +1,15 @@
+{
+  "name": "node_package_manager_demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "npm_package _ueses.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "upper-case": "^2.0.2"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "name": "com.codeifi",
+  "version": "1.0.0",
+  "description": "this is the first program of express js",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon test"
+  },
+  "author": "Ajeet Yadav",
+  "license": "ISC"
+}

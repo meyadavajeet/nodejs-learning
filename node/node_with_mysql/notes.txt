@@ -1,0 +1,4 @@
+#To install package.json in node project
+    $ npm i -y
+#To use mysql in node you have to install mysql like-
+    $ npm install mysql
