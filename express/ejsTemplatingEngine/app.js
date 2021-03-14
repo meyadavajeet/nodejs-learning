@@ -1,8 +1,13 @@
 const express = require('express');
 const app = express();
+//body parser to send post request
+const bodyParser = require('body-parser');
 app.set('view engine', 'ejs');
 // routed middleWare to use external css from assets folder
 app.use("/assets", express.static('assets'));
+
+//body parser gives a middle ware to parse post request coming from FORM
+var encoder = bodyParser.urlencoded();
 
 app.get('/profile/:name', function (req, res) {
 
@@ -23,8 +28,14 @@ app.get('/', function (req, res) {
     res.render('home')
 });
 app.get('/services', (req, res) => res.render('services'));
+
+app.post('/login',encoder, (req, res) => {
+    console.warn(req.body);
+    res.render('login');
+});
+
 app.get('/login', (req, res) => {
-    console.warn(req.query);
+    console.warn(req.query)
     res.render('login');
 });
 
