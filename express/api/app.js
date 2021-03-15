@@ -38,10 +38,27 @@ app.post('/user', jsonParser, (req, res) => {
 
 //delete api
 app.delete('/user/:id', (req, res) => {
-    userModel.deleteOne({_id: req.params.id })
+    userModel.deleteOne({ _id: req.params.id })
         .then((result) => res.status(200).json(result))
         .catch((error) => console.log(error));
 })
 //end of delete api
+
+//update api
+app.put('/user/:id',jsonParser, (req, res) => {
+    userModel.updateOne(
+        { _id: req.params.id },
+        {
+            $set: {
+                name: req.body.name,
+                email: req.body.email,
+                password: req.body.password,
+                address: req.body.address
+
+            }
+        }).then((result) => { res.status(200).json(result) })
+        .catch((error) => console.log(error))
+})
+// end of update api
 
 app.listen(4000);
