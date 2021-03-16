@@ -45,7 +45,7 @@ app.delete('/user/:id', (req, res) => {
 //end of delete api
 
 //update api
-app.put('/user/:id',jsonParser, (req, res) => {
+app.put('/user/:id', jsonParser, (req, res) => {
     userModel.updateOne(
         { _id: req.params.id },
         {
@@ -60,5 +60,14 @@ app.put('/user/:id',jsonParser, (req, res) => {
         .catch((error) => console.log(error))
 })
 // end of update api
+
+//search api
+app.get("/search/:name", (req, res) => {
+    var regex = new RegExp(req.params.name, 'i');
+    userModel.find({ name: regex })
+        .then((result) => res.status(200).json(result))
+        .catch((error) => console.log(error))
+});
+// end of search api
 
 app.listen(4000);
