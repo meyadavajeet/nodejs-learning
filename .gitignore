@@ -1,1 +1,4 @@
 .vscode
+express/error-handling/node_modules/
+express/error-handling/package-lock.json
+
