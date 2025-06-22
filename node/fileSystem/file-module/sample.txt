@@ -1,1 +1,1 @@
-Hello, this is a sample file content for Node.js File System Module. This is a new content. This is a new content. 
+Hello, this is a sample file content for Node.js File System Module. This is a new content. This is a new content. This is the updated content need to write.
